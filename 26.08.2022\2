@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+char str[100];
+int uppercount,lowercount,digitcount,i;
+printf("enter a string");
+gets(str);
+printf("string input is %s",str);
+uppercount = lowercount  =  digitcount =0;
+for(i=0; str[i] != '\0';i++)
+{
+	if(str[i] >= 'A' && str[i] <= 'Z')
+	{
+		uppercount++;
+	}
+	else if(str[i] >= 'a' && str[i] <='z')
+	{
+		lowercount++;
+	}
+	else if(str[i] >= '0' && str[i] <= '9')
+	{
+		digitcount++;
+	}
+}
+printf("\n upper case count : %d", uppercount);
+printf("\n lower case count : %d", lowercount);
+printf("\n digit count : %d", digitcount);
+return 0;
+}
